@@ -7,38 +7,69 @@ import ReactDOM from "react-dom";
 
 function Navbar(){
     return(
-        <div class="navbar">
-      <div class="container">
-        <div class="logo">
-          <ion-icon name="logo-instagram"></ion-icon>
-          <div class="separador"></div>
-          <img src="assets/img/logo.png" alt="imagem"/>
+      <div><div class="menu-topo">
+      <div class="meio">
+        <div class="insta">
+          <img
+            class="icone"
+            src="/imagens/logo-instagram.svg"
+            alt="icone do Instagram"
+          />
+          <div class="barra-v">
+           
+          </div>
+          <img class="logo" src="/imagens/logo 1.svg" alt="logo do Instagram" />
         </div>
 
-        <div class="logo-mobile">
-          <ion-icon name="logo-instagram"></ion-icon>
+        
+        <div>
+          <input class="pesquisa" placeholder="Pesquisar" tipe="text" />
         </div>
 
-        <div class="instagram-mobile">
-          <img src="assets/img/logo.png" alt="imagem" />
-        </div>
-
-        <div class="pesquisa">
-          <input type="text" placeholder="Pesquisar" />
-        </div>
-
-        <div class="icones">
-          <ion-icon name="paper-plane-outline"></ion-icon>
-          <ion-icon name="compass-outline"></ion-icon>
-          <ion-icon name="heart-outline"></ion-icon>
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
-
-        <div class="icones-mobile">
-          <ion-icon name="paper-plane-outline"></ion-icon>
+        <div class="opcoes">
+          <a href="https://www.instagram.com"
+            ><img
+              class="icone"
+              src="/imagens/paper-plane-outline.svg"
+              alt="avião de papel"
+          /></a>
+          <a href="https://www.instagram.com">
+            <img class="icone" src="/imagens/compass-outline.svg" alt="bússola"
+          /></a>
+          <a href="https://www.instagram.com"
+            ><img class="icone" src="/imagens/heart-outline.svg" alt="coração"
+          /></a>
+          <a href="https://www.instagram.com"
+            ><img class="icone" src="/imagens/person-outline.svg" alt="pessoa"
+          /></a>
         </div>
       </div>
     </div>
+    <div class="menu-topo-mobile">
+    <div class="meio">
+      <div class="insta">
+        <img
+          class="icone"
+          src="/imagens/logo-instagram.svg"
+          alt="icone do Instagram"
+        />
+      </div>
+
+      
+      <div class="insta">
+        <img src="/imagens/logo 1.svg" alt="logo do Instagram" />
+      </div>
+
+      <div class="opcoes">
+        <a href="https://www.instagram.com"
+          ><img
+            class="icone"
+            src="/imagens/paper-plane-outline.svg"
+            alt="avião de papel"
+        /></a>
+      </div>
+    </div>
+  </div> </div>
     )
 }
 
@@ -47,83 +78,168 @@ function Navbar(){
 
 function Stories(){
     return(
-        <div class="stories">
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/9gag.svg" alt="imagem"/>
-            </div>
-            <div class="usuario">
-              9gag
-            </div>
-          </div>
+      <div class="stories">
+      
 
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/meowed.svg" alt="imagem"/>
-            </div>
-            <div class="usuario">
-              meowed
-            </div>
-          </div>
+      <div class="story">
+        <div class="imagem_story">
+          <img
+            class="back"
+            src="/imagens/stories_background.jpg"
+            alt="fundo de story"
+          />
 
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/barked.svg" alt="imagem"/>
-            </div>
-            <div class="usuario">
-              barked
-            </div>
-          </div>
-
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/nathanwpylestrangeplanet.svg" alt="imagem"/>
-            </div>
-            <div class="usuario">
-              nathanwpylestrangeplanet
-            </div>
-          </div>
-
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/wawawicomics.svg" alt="imagem"/>
-            </div>
-            <div class="usuario">
-              wawawicomics
-            </div>
-          </div>
-
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/respondeai.svg" alt="imagem"/>
-            </div>
-            <div class="usuario">
-              respondeai
-            </div>
-          </div>
-
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/filomoderna.svg" alt="imagem"/>
-            </div>
-            <div class="usuario">
-              filomoderna
-            </div>
-          </div>
-
-          <div class="story">
-            <div class="imagem">
-              <img src="assets/img/memeriagourmet.svg" alt="imagem"/>
-            </div>
-            <div class="usuario">
-              memeriagourmet
-            </div>
-          </div>
-
-          <div class="setinha">
-            <ion-icon name="chevron-forward-circle"></ion-icon>
-          </div>
+          <img
+            class="foto_story"
+            src="/imagens/story1.png"
+            alt="imagem nos stories"
+          />
         </div>
+        <p class="nome_story">9gag</p>
+      </div>
+      
+      <div class="story">
+        <div class="imagem_story">
+          <img
+            class="back"
+            src="/imagens/stories_background.jpg"
+            alt="fundo de story"
+          />
+
+          <img
+            class="foto_story"
+            src="/imagens/story2.png"
+            alt="imagem nos stories"
+          />
+        </div>
+        <p class="nome_story">meowed</p>
+      </div>
+      
+      <div class="story">
+        <div class="imagem_story">
+          <img
+            class="back"
+            src="/imagens/stories_background.jpg"
+            alt="fundo de story"
+          />
+
+          <img
+            class="foto_story"
+            src="/imagens/story3.png"
+            alt="imagem nos stories"
+          />
+        </div>
+        <p class="nome_story">barked</p>
+      </div>
+     
+      <div class="story">
+        <div class="imagem_story">
+          <img
+            class="back"
+            src="/imagens/stories_background.jpg"
+            alt="fundo de story"
+          />
+
+          <img
+            class="foto_story"
+            src="/imagens/story4.png"
+            alt="imagem nos stories"
+          />
+        </div>
+        <p class="nome_story">nathanwpyle...</p>
+      </div>
+     
+      <div class="story">
+        <div class="imagem_story">
+          <img
+            class="back"
+            src="/imagens/stories_background.jpg"
+            alt="fundo de story"
+          />
+
+          <img
+            class="foto_story"
+            src="/imagens/story5.png"
+            alt="imagem nos stories"
+          />
+        </div>
+        <p class="nome_story">wawawiwac...</p>
+      </div>
+     
+      <div class="story">
+        <div class="imagem_story">
+          <img
+            class="back"
+            src="/imagens/stories_background.jpg"
+            alt="fundo de story"
+          />
+
+          <img
+            class="foto_story"
+            src="/imagens/story6.png"
+            alt="imagem nos stories"
+          />
+        </div>
+        <p class="nome_story">respondeai</p>
+      </div>
+      
+      <div class="story">
+        <div class="imagem_story">
+          <img
+            class="back"
+            src="/imagens/stories_background.jpg"
+            alt="fundo de story"
+          />
+
+          <img
+            class="foto_story"
+            src="/imagens/story7.png"
+            alt="imagem nos stories"
+          />
+        </div>
+        <p class="nome_story">filomoderna</p>
+      </div>
+     
+      <div class="story">
+        <div class="imagem_story">
+          <img
+            class="back"
+            src="/imagens/stories_background.jpg"
+            alt="fundo de story"
+          />
+
+          <img
+            class="foto_story"
+            src="/imagens/story8.png"
+            alt="imagem nos stories"
+          />
+        </div>
+        <p class="nome_story">memeriago.</p>
+      </div>
+
+      <div class="story">
+        <div class="imagem_story">
+          <img
+            class="back"
+            src="/imagens/stories_background.jpg"
+            alt="fundo de story"
+          />
+
+          <img
+            class="foto_story"
+            src="/imagens/story8.png"
+            alt="imagem nos stories"
+          />
+        </div>
+        <p class="nome_story">memeriago.</p>
+      </div>
+
+      <img
+        class="botao"
+        src="/imagens/Vector.svg"
+        alt="seta para a direita"
+      />
+    </div>
     )
 }
 
@@ -134,84 +250,128 @@ function Posts(){
     return(
         <div class="posts">
           <div class="post">
-            <div class="topo">
-              <div class="usuario">
-                <img src="assets/img/meowed.svg" alt="imagem"/>
-                meowed
-              </div>
-              <div class="acoes">
-                <ion-icon name="ellipsis-horizontal"></ion-icon>
-              </div>
+          <div class="post_topo">
+            <div class="perfil">
+              <img src="/imagens/story2.png" alt="rosinha" />
+              <p class="nome">meowed</p>
             </div>
-
-            <div class="conteudo">
-              <img src="assets/img/gato-telefone.svg" alt="imagem"/>
-            </div>
-
-            <div class="fundo">
-              <div class="acoes">
-                <div>
-                  <ion-icon name="heart-outline"></ion-icon>
-                  <ion-icon name="chatbubble-outline"></ion-icon>
-                  <ion-icon name="paper-plane-outline"></ion-icon>
-                </div>
-                <div>
-                  <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-              </div>
-
-              <div class="curtidas">
-                <img src="assets/img/respondeai.svg" alt="imagem"/>
-                <div class="texto">
-                  Curtido por <strong>respondeai</strong> e <strong>outras 101.523 pessoas</strong>
-                </div>
-              </div>
-            </div>
+            <img class="pontos" src="/imagens/3pontos.svg" alt="opções" />
           </div>
 
-          <div class="post">
-            <div class="topo">
-              <div class="usuario">
-                <img src="assets/img/barked.svg" alt="imagem"/>
-                barked
+          <img
+            class="postagem"
+            src="/imagens/gato-telefone 1.png"
+            alt="gato no celular"
+          />
+
+          <div class="info">
+           
+
+            <div class="icones_post">
+              <div class="likes_coment">
+                <img
+                  class="icone"
+                  src="/imagens/heart-outline.svg"
+                  alt="like"
+                />
+
+                <img
+                  class="icone"
+                  src="/imagens/comentario.svg"
+                  alt="comentario"
+                />
+
+                <img
+                  class="icone"
+                  src="/imagens/paper-plane-outline.svg"
+                  alt="compartilhe"
+                />
               </div>
-              <div class="acoes">
-                <ion-icon name="ellipsis-horizontal"></ion-icon>
-              </div>
+
+              <img class="icone" src="/imagens/salvar.svg" alt="salvar" />
             </div>
 
-            <div class="conteudo">
-              <img src="assets/img/dog.svg" alt="imagem"/>
-            </div>
+            <div class="dados">
+              <img
+                class="perfil_like"
+                src="/imagens/story7.png"
+                alt="perfil pequeno do responde aí"
+              />
 
-            <div class="fundo">
-              <div class="acoes">
-                <div>
-                  <ion-icon name="heart-outline"></ion-icon>
-                  <ion-icon name="chatbubble-outline"></ion-icon>
-                  <ion-icon name="paper-plane-outline"></ion-icon>
-                </div>
-                <div>
-                  <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-              </div>
-
-              <div class="curtidas">
-                <img src="assets/img/adorable_animals.svg" alt="imagem"/>
-                <div class="texto">
-                  Curtido por <strong>adorable_animals</strong> e <strong>outras 99.159 pessoas</strong>
-                </div>
-              </div>
+              <p>
+                Curtido por <span>respondeai</span> e
+                <span>outras 101.523 pessoas</span>
+              </p>
             </div>
           </div>
+        </div>
+
+      
+
+        <div class="post">
+          <div class="post_topo">
+            <div class="perfil">
+              <img src="/imagens/story3.png" alt="amarelo" />
+              <p class="nome">barked</p>
+            </div>
+            <img class="pontos" src="/imagens/3pontos.svg" alt="opções" />
+          </div>
+
+          <img
+            class="postagem"
+            src="/imagens/dog 1.png"
+            alt="gato no celular"
+          />
+
+          <div class="info">
+          
+
+            <div class="icones_post">
+              <div class="likes_coment">
+                <img
+                  class="icone"
+                  src="/imagens/heart-outline.svg"
+                  alt="like"
+                />
+
+                <img
+                  class="icone"
+                  src="/imagens/comentario.svg"
+                  alt="comentario"
+                />
+
+                <img
+                  class="icone"
+                  src="/imagens/paper-plane-outline.svg"
+                  alt="compartilhe"
+                />
+              </div>
+
+              <img class="icone" src="/imagens/salvar.svg" alt="salvar" />
+            </div>
+
+            <div class="dados">
+              <img
+                class="perfil_like"
+                src="/imagens/story6.png"
+                alt="perfil pequeno do responde aí"
+              />
+
+              <p>
+                Curtido por <span>respondeai</span> e
+                <span>outras 101.523 pessoas</span>
+              </p>
+            </div>
+          </div>
+        </div>
         </div>
     )
 }
 
 
-function Esquerda(){
+function Feed(){
     return(
-        <div class="esquerda">
+        <div class="feed">
             <Stories/>
             <Posts/>
         </div>
@@ -221,20 +381,21 @@ function Esquerda(){
 
 
 
-// aqui vai toda a parte da direita
+// // aqui vai toda a parte da direita
 
 function Usuario(){
     return(
-        <div class="usuario">
-        <img src="assets/img/catanacomics.svg" alt="imagem"/>
-        <div class="texto">
-          <strong>catanacomics</strong>
-          <span>
-            Catana
-            <ion-icon name="pencil"></ion-icon>
-          </span>
-        </div>
+      <div class="meu_perfil">
+      <img
+        class="perfil_usuario"
+        src="/imagens/catanacomics 1.png"
+        alt="perfil do usuario"
+      />
+      <div class="eu">
+        <p class="nickname">catanacomics</p>
+        <p class="nome_real">Catana</p>
       </div>
+    </div>
     )
 }
 
@@ -242,126 +403,150 @@ function Usuario(){
 function Sugestoes(){
   return(
     <div class="sugestoes">
-          <div class="titulo">
-            Sugestões para você
-            <div>Ver tudo</div>
-          </div>
+    <div class="mostra">
+      <p class="titulo">Sugestões para você</p>
+      <p class="mais">Ver tudo</p>
+    </div>
+    <div class="sugestao">
+      <div class="p1">
+        <img
+          class="perfil_sugestao"
+          src="/imagens/sugestao1.png"
+          alt="perfil_badvibes"
+        />
+        <div class="identifica">
+          <p class="nickname">badvibesmemes</p>
+          <p class="segue">Segue você</p>
+        </div>
+      </div>
+      <a
+        href="https://www.instagram.com
+    "
+        >Seguir</a>
+      
+    </div>
 
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/bad.vibes.memes.svg" alt="imagem"/>
-              <div class="texto">
-                <div class="nome">bad.vibes.memes</div>
-                <div class="razao">Segue você</div>
-              </div>
-            </div>
+    <div class="sugestao">
+      <div class="p1">
+        <img
+          class="perfil_sugestao"
+          src="/imagens/sugestao2.png"
+          alt="perfil_badvibes"
+        />
+        <div class="identifica">
+          <p class="nickname">badvibesmemes</p>
+          <p class="segue">Segue você</p>
+        </div>
+      </div>
+      <a
+        href="https://www.instagram.com
+      "
+        >Seguir</a>
+      
+    </div>
 
-            <div class="seguir">Seguir</div>
-          </div>
+    <div class="sugestao">
+      <div class="p1">
+        <img
+          class="perfil_sugestao"
+          src="/imagens/sugestao3.png"
+          alt="perfil_badvibes"
+        />
+        <div class="identifica">
+          <p class="nickname">badvibesmemes</p>
+          <p class="segue">Segue você</p>
+        </div>
+      </div>
+      <a
+        href="https://www.instagram.com
+      "
+        >Seguir</a>
+     
+    </div>
 
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/chibirdart.svg" alt="imagem"/>
-              <div class="texto">
-                <div class="nome">chibirdart</div>
-                <div class="razao">Segue você</div>
-              </div>
-            </div>
+    <div class="sugestao">
+      <div class="p1">
+        <img
+          class="perfil_sugestao"
+          src="/imagens/sugestao4.png"
+          alt="perfil_badvibes"
+        />
+        <div class="identifica">
+          <p class="nickname">badvibesmemes</p>
+          <p class="segue">Segue você</p>
+        </div>
+      </div>
+      <a
+        href="https://www.instagram.com
+        "
+        >Seguir</a>
+      
+    </div>
 
-            <div class="seguir">Seguir</div>
-          </div>
+    <div class="sugestao">
+      <div class="p1">
+        <img
+          class="perfil_sugestao"
+          src="/imagens/sugestao5.png"
+          alt="perfil_badvibes"
+        />
+        <div class="identifica">
+          <p class="nickname">badvibesmemes</p>
+          <p class="segue">Segue você</p>
+        </div>
+      </div>
 
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/razoesparaacreditar.svg" alt="imagem"/>
-              <div class="texto">
-                <div class="nome">razoesparaacreditar</div>
-                <div class="razao">Novo no Instagram</div>
-              </div>
-            </div>
+      <a
+        href="https://www.instagram.com
+          "
+        >Seguir</a>
+      
+    </div>
 
-            <div class="seguir">Seguir</div>
-          </div>
-
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/adorable_animals.svg" alt="imagem"/>
-              <div class="texto">
-                <div class="nome">adorable_animals</div>
-                <div class="razao">Segue você</div>
-              </div>
-            </div>
-
-            <div class="seguir">Seguir</div>
-          </div>
-
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/smallcutecats.svg" alt="imagem"/>
-              <div class="texto">
-                <div class="nome">smallcutecats</div>
-                <div class="razao">Segue você</div>
-              </div>
-            </div>
-
-            <div class="seguir">Seguir</div>
-          </div>
-        </div>)
+   <Links/>
+  </div>
+  )
 }
 
 
 function Links(){
     return(
-        <div class="links">
-          Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes •
-          Hashtags • Idioma
-        </div>
+      <div class="detalhes">
+      <p>
+        Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade •
+        Termos • Localizações • Contas mais relevantes • Hashtags •
+        Idioma
+      </p>
 
-    )
-}
-
-function Copyright(){
-    return(
-        <div class="copyright">
-          © 2021 INSTAGRAM DO FACEBOOK
-        </div>
-
-    )
-}
-
-
-
-function Fundomobile(){
-    return(
-        <div class="fundo-mobile">
-      <ion-icon name="home"></ion-icon>
-      <ion-icon name="search-outline"></ion-icon>
-      <ion-icon name="add-circle-outline"></ion-icon>
-      <ion-icon name="heart-outline"></ion-icon>
-      <ion-icon name="person-outline"></ion-icon>
+      <p class="detalhes">© 2021 INSTAGRAM DO FACEBOOK</p>
     </div>
     )
 }
 
+
+
+
+
+
 function Sidebar(){
     return(
-        <div>
+        <div class="bloco_lateral">
+          <div class="sidebar">
             <Usuario/>
             <Sugestoes/>
-            <Links/>
-            <Copyright/>
-            <Fundomobile/>
+            
+          </div>
         </div>
     )
 }
 
 
-// agora vem o corpo do site 
+// // agora vem o corpo do site 
 
 function Corpo(){
     return(
-        <div class="corpo">
-            <Esquerda/>
+        <div class="tudo">
+            <Feed/>
             <Sidebar/>
         </div>
     )
