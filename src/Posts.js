@@ -1,77 +1,38 @@
 export default function Posts(){
+  const posts = [
+    {nome:"meowed",perfil:"/imagens/story2.png",post:"/imagens/gato-telefone 1.png",curtidoPor:"/imagens/story7.png",nomeCurtidoPor:"respondeai",numeroLikes:120.484},
+    {nome:"barked",perfil:"/imagens/story3.png",post:"/imagens/dog 1.png",curtidoPor:"/imagens/sugestao4.png",nomeCurtidoPor:"adorable_animals",numeroLikes:150.200},
+    
+  ]
+
+  
     return(
         <div class="posts">
-          <div class="post">
-          <div class="post_topo">
-            <div class="perfil">
-              <img src="/imagens/story2.png" alt="rosinha" />
-              <p class="nome">meowed</p>
-            </div>
-            <img class="pontos" src="/imagens/3pontos.svg" alt="opções" />
-          </div>
-
-          <img
-            class="postagem"
-            src="/imagens/gato-telefone 1.png"
-            alt="gato no celular"
-          />
-
-          <div class="info">
-           
-
-            <div class="icones_post">
-              <div class="likes_coment">
-                <img
-                  class="icone"
-                  src="/imagens/heart-outline.svg"
-                  alt="like"
-                />
-
-                <img
-                  class="icone"
-                  src="/imagens/comentario.svg"
-                  alt="comentario"
-                />
-
-                <img
-                  class="icone"
-                  src="/imagens/paper-plane-outline.svg"
-                  alt="compartilhe"
-                />
-              </div>
-
-              <img class="icone" src="/imagens/salvar.svg" alt="salvar" />
-            </div>
-
-            <div class="dados">
-              <img
-                class="perfil_like"
-                src="/imagens/story7.png"
-                alt="perfil pequeno do responde aí"
-              />
-
-              <p>
-                Curtido por <span>respondeai</span> e
-                <span>outras 101.523 pessoas</span>
-              </p>
-            </div>
-          </div>
-        </div>
-
+          
+          {posts.map((p)=><Post nome={p.nome} perfil={p.perfil} post={p.post} curtidoPor={p.curtidoPor} nomeCurtidoPor={p.nomeCurtidoPor} numeroLikes={p.numeroLikes}/>)}
       
 
-        <div class="post">
+        
+        </div>
+    )
+}
+
+
+
+function Post(props){
+  return(
+    <div class="post">
           <div class="post_topo">
             <div class="perfil">
-              <img src="/imagens/story3.png" alt="amarelo" />
-              <p class="nome">barked</p>
+              <img src={props.perfil} alt="amarelo" />
+              <p class="nome">{props.nome}</p>
             </div>
             <img class="pontos" src="/imagens/3pontos.svg" alt="opções" />
           </div>
 
           <img
             class="postagem"
-            src="/imagens/dog 1.png"
+            src={props.post}
             alt="gato no celular"
           />
 
@@ -105,17 +66,16 @@ export default function Posts(){
             <div class="dados">
               <img
                 class="perfil_like"
-                src="/imagens/story6.png"
+                src={props.curtidoPor}
                 alt="perfil pequeno do responde aí"
               />
 
               <p>
-                Curtido por <span>respondeai</span> e
-                <span>outras 101.523 pessoas</span>
+                Curtido por <span>{props.nomeCurtidoPor}</span> e
+                <span>outras {props.numeroLikes} pessoas</span>
               </p>
             </div>
           </div>
         </div>
-        </div>
-    )
+  )
 }
