@@ -1,7 +1,9 @@
+import React from "react"
+
 export default function Posts(){
   const posts = [
-    {nome:"meowed",perfil:"/imagens/story2.png",post:"/imagens/gato-telefone 1.png",curtidoPor:"/imagens/story7.png",nomeCurtidoPor:"respondeai",numeroLikes:120.484},
-    {nome:"barked",perfil:"/imagens/story3.png",post:"/imagens/dog 1.png",curtidoPor:"/imagens/sugestao4.png",nomeCurtidoPor:"adorable_animals",numeroLikes:150.200},
+    {nome:"meowed",perfil:"/imagens/story2.png",post:"/imagens/gato-telefone 1.png",curtidoPor:"/imagens/story7.png",nomeCurtidoPor:"respondeai",numeroLikes:120},
+    {nome:"barked",perfil:"/imagens/story3.png",post:"/imagens/dog 1.png",curtidoPor:"/imagens/sugestao4.png",nomeCurtidoPor:"adorable_animals",numeroLikes:150},
     
   ]
 
@@ -20,6 +22,33 @@ export default function Posts(){
 
 
 function Post(props){
+let [save,setSave] = React.useState("/imagens/salvar.svg")
+let [like,setLike] = React.useState("/imagens/heart-outline.svg")
+let [nlikes,setNlikes] = React.useState(props.numeroLikes) 
+
+
+function marcarSave(){
+  if(save === "/imagens/salvar.svg"){
+    setSave("/imagens/salvarSelecionado.svg")
+  } else{setSave("/imagens/salvar.svg")}
+}
+
+function marcaLike(){
+  if(like === "/imagens/heart-outline.svg"){
+    setLike("/imagens/likeVermelho.png")
+    setNlikes(nlikes+=1)
+  }else{
+    setLike("/imagens/heart-outline.svg")
+    setNlikes(nlikes-=1)
+  }
+}
+
+function marcaLikeFoto(){
+  if(like === "/imagens/heart-outline.svg"){
+    setLike("/imagens/likeVermelho.png")
+    setNlikes(nlikes+=1)
+  }
+}
   return(
     <div class="post">
           <div class="post_topo">
@@ -30,7 +59,7 @@ function Post(props){
             <img class="pontos" src="/imagens/3pontos.svg" alt="opções" />
           </div>
 
-          <img
+          <img onDoubleClick={marcaLikeFoto}
             class="postagem"
             src={props.post}
             alt="gato no celular"
@@ -41,9 +70,9 @@ function Post(props){
 
             <div class="icones_post">
               <div class="likes_coment">
-                <img
+                <img onClick={marcaLike}
                   class="icone"
-                  src="/imagens/heart-outline.svg"
+                  src={like}
                   alt="like"
                 />
 
@@ -59,8 +88,8 @@ function Post(props){
                   alt="compartilhe"
                 />
               </div>
-
-              <img class="icone" src="/imagens/salvar.svg" alt="salvar" />
+                
+              <img  onClick={marcarSave} class="icone" src={save} alt="salvar" />
             </div>
 
             <div class="dados">
@@ -72,7 +101,7 @@ function Post(props){
 
               <p>
                 Curtido por <span>{props.nomeCurtidoPor}</span> e
-                <span>outras {props.numeroLikes} pessoas</span>
+                <span>outras {nlikes} pessoas</span>
               </p>
             </div>
           </div>

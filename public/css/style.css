@@ -58,6 +58,7 @@ body {
 
 .editarNome{
   display: flex;
+  width: 200px;
 }
 
 .editarNome img{
